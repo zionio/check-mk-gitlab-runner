@@ -17,3 +17,4 @@ The package can be distributed with [Agent Backery](https://checkmk.com/cms_wato
 and upload with [Extension Packages](https://checkmk.com/cms_mkps.html)
 * Go to _Monitoring Agents_ -> _Rules_ -> _Generic Options_ -> _Deploy custom files with agent_
 and create (or edit) a Rule.
+* Bake Agents (don't forget to sign all agents)
