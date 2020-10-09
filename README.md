@@ -7,7 +7,7 @@ This is a very simple local check to show GitLab Runner status.
 ### Check_MK CRE (check-mk-raw)
 
 Download `custom/gitlab_runner/lib/local/gitlab_runner` and copy
-to `/usr/lib/check_mk_agent/plugins/` directory.
+to `/usr/lib/check_mk_agent/local/` directory.
 
 ### Check_MK CEE (check-mk-enterprise)
 
