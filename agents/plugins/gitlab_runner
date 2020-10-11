@@ -1,0 +1,30 @@
+#! /usr/bin/env bash
+
+# Check_MK GitLab Runner Status plugin
+#
+# Copyright 2020, Andrea Mancuso <andrea@fusilab.net>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+echo '<<<gitlab_runner>>>'
+
+if type gitlab-runner >/dev/null
+then
+  _version=$(gitlab-runner --version 2>/dev/null | grep ^Version|cut -f2 -d':' | tr -d '[:space:]')
+  echo "Version $_version"
+
+  gitlab-runner status > /dev/null 2>&1 && _status=0 || _status=1
+  echo "Status $_status"
+
+  echo "Runners"
+  gitlab-runner --log-format=json list 2> >(egrep -v '(Runtime platform|Listing configured)')
+fi

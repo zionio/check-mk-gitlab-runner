@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos
 
 ### macOS ###
 # General
@@ -42,4 +42,5 @@ Temporary Items
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos
